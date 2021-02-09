@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.dino{
+    background-image: url(bike.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 115px;
+    height: 110px;
+    position: absolute;
+    bottom: 90px;
+    left: 60px;
+}
+.obstacle{
+    width: 255px;
+    height: 103px;
+    background-size: cover;
+    background-image: url(car.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 90px;
+    left: 80vw;
+}
+#scoreCont{
+    position: relative;
+    left: 88vw;
+    top: 0px;
+    width: 139px;
+    border: 4px solid rgb(157 2 171);
+    color: #f7ccff;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+}
+.gameOver{
+    visibility: hidden;
+    position: relative;
+    top: 175px;
+    left: 30vw;
+    color: rgb(252, 26, 26);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.scoreCont{
+    border: 2px solid red;;
+}
+
+.animateDino{
+    animation: dino 0.8s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -15vw;
+    }
+}
+
+@keyframes dino{
+    0%{
+        bottom: 90px;
+    }
+    50%{
+        bottom: 420px;
+    }
+    100%{
+        bottom: 90px;
+    }
+}
